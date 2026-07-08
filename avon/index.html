@@ -30,14 +30,15 @@
     }
     a { color: var(--accent-dark); }
     .site-nav { background: var(--nav-bg); position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--nav-gold); }
-    .site-nav-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; padding: 0 1.25rem; flex-wrap: wrap; }
-    .nav-brand { display: flex; align-items: center; gap: 0.45rem; font-weight: 800; font-size: 1.1rem; color: var(--nav-active); text-decoration: none; padding: 0.75rem 0; margin-right: 0.75rem; white-space: nowrap; }
+    .site-nav-inner { max-width: 1000px; margin: 0 auto; padding: 0.6rem 1.25rem; }
+    .nav-top-row { display: flex; align-items: center; }
+    .nav-brand { display: flex; align-items: center; gap: 0.45rem; font-weight: 800; font-size: 1.1rem; color: var(--nav-active); text-decoration: none; padding: 0.15rem 0; margin-right: 0.75rem; white-space: nowrap; }
     .nav-brand:hover { color: var(--nav-gold); }
     .nav-brand .brand-obx { color: var(--nav-gold); }
-    .nav-links { display: flex; align-items: stretch; gap: 0; overflow-x: auto; scrollbar-width: none; }
-    .nav-links::-webkit-scrollbar { display: none; }
-    .nav-links a { color: var(--nav-text); text-decoration: none; font-size: 0.85rem; font-weight: 500; padding: 0.75rem 0.75rem; white-space: nowrap; }
-    .nav-links a:hover { color: var(--nav-active); }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 0.15rem 0; }
+    .nav-links a { color: var(--nav-text); text-decoration: none; font-size: 0.83rem; font-weight: 500; padding: 0.3rem 0.6rem; white-space: nowrap; border-radius: 4px; }
+    .nav-links a:hover { color: var(--nav-active); background: rgba(255,255,255,.08); }
+    .nav-links a.current { color: var(--nav-active); background: rgba(232,184,74,.18); font-weight: 700; }
     .nav-cta { margin-left: auto; flex-shrink: 0; }
     .nav-cta a { display: inline-block; background: var(--nav-gold); color: #1A2B3C; font-weight: 700; padding: 0.4rem 0.85rem; border-radius: 5px; text-decoration: none; font-size: 0.82rem; margin: 0.6rem 0; }
     .page-hero { background: linear-gradient(160deg, #0d2540 0%, #184a78 55%, #2461a8 130%); color: #eaf3ff; padding: 2.8rem 1.5rem 2.4rem; }
@@ -85,11 +86,13 @@
 <body>
   <nav class="site-nav" aria-label="OBX Deals network">
     <div class="site-nav-inner">
-      <a href="/" class="nav-brand"><span class="brand-obx">OBX</span>&nbsp;Guide</a>
-      <div class="nav-links">
-        <a href="/corolla/">Corolla</a><a href="/duck/">Duck</a><a href="/southern-shores/">Southern Shores</a><a href="/kitty-hawk/">Kitty Hawk</a><a href="/carova/">Carova</a><a href="/kill-devil-hills/">Kill Devil Hills</a><a href="/nags-head/">Nags Head</a><a href="/south-nags-head/">South Nags Head</a><a href="/rodanthe/">Rodanthe</a><a href="/waves/">Waves</a><a href="/salvo/">Salvo</a><a href="/avon/" style="color:#fff;font-weight:700">Avon</a><a href="/buxton/">Buxton</a><a href="/frisco/">Frisco</a><a href="/hatteras-village/">Hatteras Village</a><a href="/manteo/">Manteo</a><a href="/ocracoke/">Ocracoke</a>
+      <div class="nav-top-row">
+        <a href="/" class="nav-brand"><span class="brand-obx">OBX</span>&nbsp;Guide</a>
+        <div class="nav-cta"><a href="https://search.obx.deals/">Search rentals &rarr;</a></div>
       </div>
-      <div class="nav-cta"><a href="https://search.obx.deals/">Search rentals &rarr;</a></div>
+      <div class="nav-links">
+        <a href="/corolla/">Corolla</a><a href="/duck/">Duck</a><a href="/southern-shores/">Southern Shores</a><a href="/kitty-hawk/">Kitty Hawk</a><a href="/carova/">Carova</a><a href="/kill-devil-hills/">Kill Devil Hills</a><a href="/nags-head/">Nags Head</a><a href="/south-nags-head/">South Nags Head</a><a href="/rodanthe/">Rodanthe</a><a href="/waves/">Waves</a><a href="/salvo/">Salvo</a><a href="/avon/" class="current">Avon</a><a href="/buxton/">Buxton</a><a href="/frisco/">Frisco</a><a href="/hatteras-village/">Hatteras Village</a><a href="/manteo/">Manteo</a><a href="/ocracoke/">Ocracoke</a>
+      </div>
     </div>
   </nav>
 
